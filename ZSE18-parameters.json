@@ -1,0 +1,338 @@
+{
+    "description": "Motion Sensor ZSE18",
+    "parameters": [
+        {
+            "parameterNumber": 2,
+            "label": {
+                "en": "Motion Sensitivity ",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set motion sensitivity for the motion detector to minimize false alerts. Set value to 0 to disable motion reports.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 4,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "motion reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 8,
+                        "step": 1,
+                        "scale": 1
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 13,
+            "label": {
+                "en": "Vibration Sensitivity",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set vibration sensitivity for tamper alerts where 4 is the most sensitive and 1 is the least sensitive.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 3,
+            "format": {
+                "type": "range",
+                "min": 1,
+                "max": 4,
+                "step": 1,
+                "scale": 1.0
+            }
+        },
+        {
+            "parameterNumber": 14,
+            "label": {
+                "en": "Basic Set Reporting For Motion",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable or disable basic set reporting when motion is detected.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable Basic Set Reports for motion",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable Basic Set Reports for motion",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 15,
+            "label": {
+                "en": "Basic Set Reporting Values",
+                "pl": ""
+            },
+            "description": {
+                "en": "Select the basic set value to be sent when motion is detected.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "send 0xFF basic set report (ON) when motion is detected (default)",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "send 0x00 basic set report (OFF) when motion is detected.",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 16,
+            "label": {
+                "en": "Basic Set Reporting For Motion Cleared",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable or disable basic set reporting when motion is cleared.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable Basic Set Reports for motion cleared",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable Basic Set Reports for motion cleared",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 17,
+            "label": {
+                "en": "Disable Vibration Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable vibration reports for the sensor (value 0). ",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+           "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable Vibration Reports",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable Vibration Reports",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 18,
+            "label": {
+                "en": "Motion Clear Delay",
+                "pl": ""
+            },
+            "description": {
+                "en": "The amount of time the device waits to send a motion clear notification after the last motion event is detected.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 30,
+            "format": {
+                "max": 65535,
+                "min": 10,
+                "scale": 1,
+                "step": 1,
+                "type": "range",
+                "unit": "sec"
+            }
+        },
+        {
+            "parameterNumber": 19,
+            "label": {
+                "en": "Enable Binary Sensor Reporting",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable or disable binary sensor reporting when motion is detected.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable Binary Sensor Reports for motion",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable Binary Sensor for motion",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 20,
+            "label": {
+                "en": "LED Indicator",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide if you want the LED indicator to blink when motion is detected.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "LED doesn't blink when motion detected",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "LED blinks when motion detected",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 32,
+            "label": {
+                "en": "Low Battery Report",
+                "pl": ""
+            },
+            "description": {
+                "en": "Which % level should the device report low battery to the hub.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 10,
+            "format": {
+                "max": 50,
+                "min": 10,
+                "scale": 1,
+                "step": 1,
+                "type": "range",
+                "unit": "%"
+            }
+        },
+        {
+            "parameterNumber": 254,
+            "label": {
+                "en": "Settings Lock",
+                "pl": ""
+            },
+            "description": {
+                "en": "Lock parameter settings (value 1) and prevent any values from being changed until unlocked again (value 0).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Parameter settings unlocked",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Parameter settings locked",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
