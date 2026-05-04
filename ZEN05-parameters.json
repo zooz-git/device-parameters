@@ -1,0 +1,539 @@
+{
+    "description": "ZEN05 Outdoor Plug",
+    "parameters": [
+        {
+            "parameterNumber": 1,
+            "label": {
+                "en": "LED Indicator Behavior",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide how the LED indicator behaves depending on the on/off status of the plug.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "LED on when plug on, LED off when plug off",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "LED on when plug off, LED off when plug on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "LED always off",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 3,
+                        "description": {
+                            "en": "LED always on",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 2,
+            "label": {
+                "en": "Auto-off Timer",
+                "pl": ""
+            },
+            "description": {
+                "en": "Auto-off timer will automatically turn the Smart Plug off after x minutes once it has been turned on.",
+                "pl": ""
+            },
+            "size": 4,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "timer disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 65535,
+                        "step": 1,
+                        "scale": 1,
+                        "unit": "min"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 4,
+            "label": {
+                "en": "Auto-on Timer",
+                "pl": ""
+            },
+            "description": {
+                "en": "Auto-on timer will automatically turn the Smart Plug on after x minutes once it has been turned off.",
+                "pl": ""
+            },
+            "size": 4,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "timer disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 65535,
+                        "step": 1,
+                        "scale": 1,
+                        "unit": "min"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 6,
+            "label": {
+                "en": "On/Off Status After Power Failure",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose the recovery state for your Smart Plug if power outage occurs.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "always off once restored",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "always on once restored",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "remembers and restores status",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 7,
+            "label": {
+                "en": "LED Brightness Level",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose the LED indicator brightness level.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "high",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "medium",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "low",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 8,
+            "label": {
+                "en": "Disable Manual Control",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable or enable manual control (turning the Smart Plug on and off using the physical button).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "manual control disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "manual control enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 9,
+            "label": {
+                "en": "Watt Report Threshold",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose when the plug will report Watts to your hub. Value 1 = 1 Watt change.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 5,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "trigger disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 100,
+                        "step": 1,
+                        "scale": 1,
+                        "unit": "Watt"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 10,
+            "label": {
+                "en": "Watt Report Frequency"
+            },
+            "description": {
+                "en": "Decide how often the plug will report Watt data to the hub (in minute intervals).",
+                "pl": ""
+            },
+            "size": 4,
+            "defaultValue": 5,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 65535,
+                "step": 1,
+                "scale": 1,
+                "unit": "min"
+            }
+        },
+        {
+            "parameterNumber": 11,
+            "label": {
+                "en": "Amp Report Threshold",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose when the plug will report Amps to your hub. Value 1 = 0.1 A and value 50 = 5 A change.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "trigger disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 50,
+                        "step": 1,
+                        "scale": 1,
+                        "unit": "A"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 12,
+            "label": {
+                "en": "kWh Report Threshold",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose when the plug will report kWh to your hub. Value 1 = 0.01 kWh and value 200 = 2 kWh change.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "trigger disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 200,
+                        "step": 1,
+                        "scale": 1,
+                        "unit": "kWh"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 13,
+            "label": {
+                "en": "Disable Watt Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable or enable power wattage reports sent from the plug.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Watt reports enabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Watt reports disabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 14,
+            "label": {
+                "en": "Disable Amp Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable or enable electrical current reports sent from the plug.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Amp reports enabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Amp reports disabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 15,
+            "label": {
+                "en": "Amp Report Frequency"
+            },
+            "description": {
+                "en": "Decide how often the plug will report Amp data to the hub (in minute intervals).",
+                "pl": ""
+            },
+            "size": 4,
+            "defaultValue": 60,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 65535,
+                "step": 1,
+                "scale": 1,
+                "unit": "min"
+            }
+        },
+        {
+            "parameterNumber": 16,
+            "label": {
+                "en": "Volt Report Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide how often the plug will report Volt data to the hub (in minute intervals).",
+                "pl": ""
+            },
+            "size": 4,
+            "defaultValue": 60,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "voltage reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 0,
+                        "max": 65535,
+                        "step": 1,
+                        "scale": 1,
+                        "unit": "min"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 17,
+            "label": {
+                "en": "kWh Report Frequency"
+            },
+            "description": {
+                "en": "Decide how often the plug will report kWh data to the hub (in minute intervals).",
+                "pl": ""
+            },
+            "size": 4,
+            "defaultValue": 60,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 65535,
+                "step": 1,
+                "scale": 1,
+                "unit": "min"
+            }
+        },
+        {
+            "parameterNumber": 18,
+            "label": {
+                "en": "Disable kWh Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable or enable kWh reports sent from the plug.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "kWh reports enabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "kWh reports disabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
