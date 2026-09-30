@@ -720,6 +720,98 @@
             },
             "parameterNumber": 19,
             "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Disable multi-tap scene control so that only single taps report via central scene.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "multi-tap for scene control enabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "multi-tap for scene control disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Scene Control Multi-Tap",
+                "pl": ""
+            },
+            "parameterNumber": 20,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose the color of the LED indicator in opposite switch state (instead of off). 0 -  off, 1 - white, 2 - blue, 3 - green, 4 - red.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "off",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "white",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "blue",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "green",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "red",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 4
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED Indicator Multi-Color",
+                "pl": ""
+            },
+            "parameterNumber": 21,
+            "size": 1
         }
     ]
 }
